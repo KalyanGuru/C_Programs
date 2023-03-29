@@ -65,7 +65,7 @@ int main()
  while(n)
  {
  int ch;
- printf("\nEnter your choice (Press 1 for push or press 2 for pop): ");
+ printf("\nEnter your choice (Press 1 for push or press 2 for pop and press 3 for EXIT): ");
  scanf("%d",&ch);
  int x,y;
  int item;
@@ -83,6 +83,7 @@ int main()
             else
              printf("poped item is %d",y);
             break;
+    case 3: n=0;
   }
  }
 }
