@@ -36,7 +36,7 @@ int isempty(st *s)
 int push(st *s2, int item)
 {
  if( isfull(s2) )
-        return 1;
+        return 0;
  s2->a[++s2->top]= item;
     
 }
@@ -46,7 +46,7 @@ int pop(st *s2)
  int value;
  if(isempty(s2))
  {
-  return 1;
+  return -1;
  }
  else
  {
@@ -74,11 +74,11 @@ int main()
     case 1: printf("\nEnter the element to be pushed: ");
             scanf("%d",&item);
             x= push(&s,item); 
-            if(x==1) 
+            if(x==0) 
              printf("\nSTACK OVERFLOW");
             break;
     case 2: y=pop(&s);
-            if(y==1)
+            if(y==-1)
              printf("\nSTACK UNDERFLOW");
             else
              printf("poped item is %d",y);
