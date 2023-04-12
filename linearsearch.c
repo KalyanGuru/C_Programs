@@ -7,12 +7,10 @@ int main ()
   scanf ("%d", &n);
   for (i = 0; i < n; i++)
     {
-
       scanf ("%d", &ar[i]);
     }
   linsearch (ar, n);
 }
-
 void linsearch (int ar[], int n)
 {
   int num, i, flag = 0;
@@ -26,11 +24,7 @@ void linsearch (int ar[], int n)
 	  flag = 1;
 	  break;
 	}
-
-
-
     }
   if (flag == 0)
-
     printf ("The element is not found");
 }
