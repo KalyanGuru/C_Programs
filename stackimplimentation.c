@@ -33,25 +33,33 @@ int isempty(st *s)
     return 0;
 }
 
-int push(st *s2, int item)
+void push(st *s2, int item)
 {
  if( isfull(s2) )
-        return 0;
- s2->a[++s2->top]= item;
-    
+ {
+         printf("\nSTACK OVERFLOW");
+         return;
+ }
+ else
+ {
+    s2->a[++s2->top]= item;
+    return;
+ }
 }
 
-int pop(st *s2)
+void pop(st *s2)
 {
  int value;
  if(isempty(s2))
  {
-  return -1;
+  printf("\nSTACK UNDERFLOW");
+   return;
  }
  else
  {
   value=s2->a[s2->top--];
-  return value;
+   printf("poped item is %d",value);
+   return;
  }
 }
 
@@ -67,21 +75,14 @@ int main()
  int ch;
  printf("\nEnter your choice (Press 1 for push or press 2 for pop and press 3 for EXIT): ");
  scanf("%d",&ch);
- int x,y;
  int item;
  switch(ch)
  {
     case 1: printf("\nEnter the element to be pushed: ");
             scanf("%d",&item);
-            x= push(&s,item); 
-            if(x==0) 
-             printf("\nSTACK OVERFLOW");
+            push(&s,item); 
             break;
-    case 2: y=pop(&s);
-            if(y==-1)
-             printf("\nSTACK UNDERFLOW");
-            else
-             printf("poped item is %d",y);
+    case 2: pop(&s);
             break;
     case 3: n=0;
   }
