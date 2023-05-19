@@ -1,6 +1,6 @@
 #include<stdio.h>
 int bubblesh(int a[],int n);
-void main ()
+int main ()
 {
     int i,n,a[100];
     printf ("Enter the range :");
