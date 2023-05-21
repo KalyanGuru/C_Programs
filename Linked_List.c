@@ -21,7 +21,7 @@ void append(node **phead,int item)
 		while(ptr->next!=NULL)
 		{
 		  ptr=ptr->next;
-	    }
+	        }
 		ptr->next=new_node;
 	}
 }
@@ -32,18 +32,7 @@ void insert_beg(node **phead,int item)
 	new_node->data=item;
 	new_node->next=*phead;
 	*phead=new_node;
-}/*
-node *searchNode(node** phead, int key) 
-{
-	node*ptr=*phead;
-    int c=1;
-    while(c!=key)
-    {	
-    	ptr=ptr->next;
-    	c++;
-	}
-	return (ptr);
-}*/
+}
 void insert_mid(node **phead,int pos,int item)
 {
 	node *new_node=(node *)malloc(sizeof(node));
@@ -90,18 +79,18 @@ void del_mid(node **phead,int pos)
 	}
 	else
 	{
-		node *ptr=*phead;
+        node *ptr=*phead;
     	node *prev=*phead;
 	while(c!=pos)
-     {
+       {
 	prev=ptr;
 	ptr=ptr->next;
 		c++;
-    }
+        }
 	prev->next=ptr->next;
 	printf("%d is deleted\n", ptr->data);
 	free(ptr);
-}
+        }
 }
 int main()
 {
@@ -142,4 +131,3 @@ int main()
 		}
 	}
 }
-
