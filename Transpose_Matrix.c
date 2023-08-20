@@ -2,7 +2,7 @@
 int main()
 {
     int ar[100][100],r,c,i,j;
-    printf("Enter the number of row and colume you want: ");
+    printf("Enter the number of row and column you want: ");
     scanf("%d%d",&r,&c);
     for(i=0;i<r;i++)
     {
